@@ -1,7 +1,7 @@
-### Setting up ESLint, Prettier and Husky with lint-staged in Next.js
+## Setting up ESLint, Prettier and Husky with lint-staged in Next.js
 This repo is created for the tutorial purpose of my blog post [Setting up ESLint, Prettier, and Husky with lint-staged for your Next.js Project](https://niteshseram.in/blog/setting-up-eslint-prettier-and-husky-with-lint-staged-for-your-nextjs-project).
 
-#### Follow through commits
+### Follow through commits
 To follow through the process of setting these configuration, checkout the commits
 - Step 1: Adding `next lint` script in `package.json` file. When this script is runned, it will install `eslint` and `eslint-config-next`
 - Step 2: To add more eslint rules to the existing one, we add `eslint:recommended` in `.eslintrc.json` file
