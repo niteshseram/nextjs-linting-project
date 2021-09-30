@@ -1,34 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Setting up ESLint, Prettier and Husky with lint-staged in Next.js
+This repo is created for the tutorial purpose of my blog post [Setting up ESLint, Prettier, and Husky with lint-staged for your Next.js Project](https://niteshseram.in/blog/setting-up-eslint-prettier-and-husky-with-lint-staged-for-your-nextjs-project).
 
-## Getting Started
+#### Follow through commits
+To follow through the process of setting these configuration, checkout the commits
+- Step 1: Adding `next lint` script in `package.json` file. When this script is runned, it will install `eslint` and `eslint-config-next`
+- Step 2: To add more eslint rules to the existing one, we add `eslint:recommended` in `.eslintrc.json` file
+- Step 3: We install `prettier` and `eslint-config-prettier` and setup the config for prettier in `.prettierrc.json` file. And finally add `prettier` in `.eslintrc.json` file as well
+- Step 4: Add a script `format": "prettier --write .` in `package.json` to format all our files in one go
+- Step 5: Install `husky` and `lint-staged` and add the script `prepare": "husky install` in the `package.json` file. Then run `npm run prepare` or `yarn prepare` to install some necessary script for huksy to work
+- Step 6: Add `lint-staged` script and `precommit` script in `package.json` file
+- Step 7: Finally, run `npx husky add .husky/pre-commit "npm run precommit"` to create a precommit hook which will run `precommit` script everytime when we do some commit
 
-First, run the development server:
+Visit the blog [post](https://niteshseram.in/blog/setting-up-eslint-prettier-and-husky-with-lint-staged-for-your-nextjs-project) to follow in details.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Hope this finds you helpful🙂
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
